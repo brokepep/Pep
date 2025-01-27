@@ -1,36 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Pep">
+      <UniqueIdentifier>{AA14880B-161E-887C-9F99-9E7C0BA2937C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Pep\Events">
+      <UniqueIdentifier>{4E9D5696-3A55-98E3-A35C-713F8F3333D4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Pep\Platform">
+      <UniqueIdentifier>{57442b8d-8df3-48f0-9135-973781ffb582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pep\Platform\Windows">
+      <UniqueIdentifier>{b2783882-56fb-4b19-83e5-5a944d9c745e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\pep\Core.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Pep.h" />
+    <ClInclude Include="src\Pep\Application.h">
+      <Filter>Pep</Filter>
     </ClInclude>
-    <ClInclude Include="src\pep\Application.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Pep\Core.h">
+      <Filter>Pep</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pep.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Pep\EntryPoint.h">
+      <Filter>Pep</Filter>
     </ClInclude>
-    <ClInclude Include="src\pep\EntryPoint.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Pep\Events\ApplicationEvent.h">
+      <Filter>Pep\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pep\Events\Event.h">
+      <Filter>Pep\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Events\KeyEvent.h">
+      <Filter>Pep\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Events\MouseEvent.h">
+      <Filter>Pep\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Log.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
+    <ClInclude Include="src\peppch.h" />
+    <ClInclude Include="src\Pep\Window.h" />
+    <ClInclude Include="src\Pep\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\pep\Application.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Pep\Application.cpp">
+      <Filter>Pep</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pep\Log.cpp">
+      <Filter>Pep</Filter>
+    </ClCompile>
+    <ClCompile Include="src\peppch.cpp" />
+    <ClCompile Include="src\Pep\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
