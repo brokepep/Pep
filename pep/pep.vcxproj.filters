@@ -10,14 +10,11 @@
     <Filter Include="src\Pep\Events">
       <UniqueIdentifier>{053A5DCD-F107-51D3-DA9B-C1F9C6082D38}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Pep\imgui">
-      <UniqueIdentifier>{6BDB79F1-D79B-F527-A0D6-3EA50C563A04}</UniqueIdentifier>
+    <Filter Include="src\Pep\ImGui">
+      <UniqueIdentifier>{2B4336EF-9703-B225-603E-FBA2CCBDF601}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Platform\OpenGL">
-      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platform\Windows">
       <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
@@ -69,6 +66,9 @@
     <ClInclude Include="src\Pep\Events\MouseEvent.h">
       <Filter>src\Pep\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pep\ImGui\ImGuiLayer.h">
+      <Filter>src\Pep\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pep\Input.h">
       <Filter>src\Pep</Filter>
     </ClInclude>
@@ -89,12 +89,6 @@
     </ClInclude>
     <ClInclude Include="src\Pep\Window.h">
       <Filter>src\Pep</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\imgui\ImGuiLayer.h">
-      <Filter>src\Pep\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>src\Platform\Windows</Filter>
@@ -1364,6 +1358,12 @@
     <ClCompile Include="src\Pep\Application.cpp">
       <Filter>src\Pep</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pep\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Pep\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pep\ImGui\ImGuiLayer.cpp">
+      <Filter>src\Pep\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Pep\Layer.cpp">
       <Filter>src\Pep</Filter>
     </ClCompile>
@@ -1372,12 +1372,6 @@
     </ClCompile>
     <ClCompile Include="src\Pep\Log.cpp">
       <Filter>src\Pep</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Pep\imgui\ImGuiLayer.cpp">
-      <Filter>src\Pep\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>

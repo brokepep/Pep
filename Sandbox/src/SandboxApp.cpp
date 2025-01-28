@@ -23,7 +23,6 @@ class Sandbox : public Pep::Application
 public:
 	Sandbox() {
 		PushLayer( new ExampleLayer() );
-		PushOverlay( new Pep::ImGuiLayer() );
 	}
 	~Sandbox() {
 	}
