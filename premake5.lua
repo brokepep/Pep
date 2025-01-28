@@ -14,6 +14,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Pep/vendor/GLFW/include"
 IncludeDir["glad"] = "Pep/vendor/glad/include"
 IncludeDir["imgui"] = "Pep/vendor/imgui"
+IncludeDir["glm"] = "Pep/vendor/glm"
 
 include "Pep/vendor/GLFW"
 include "Pep/vendor/glad"
@@ -33,7 +34,9 @@ project "Pep"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -42,7 +45,8 @@ project "Pep"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.glad}",
-		"%{IncludeDir.imgui}"
+		"%{IncludeDir.imgui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links {
@@ -97,13 +101,16 @@ project "Sandbox"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
 	{
 		"Pep/vendor/spdlog/include",
-		"Pep/src"
+		"Pep/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links

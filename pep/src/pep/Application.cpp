@@ -4,6 +4,8 @@
 
 #include <glad/glad.h>
 
+#include "glm/glm.hpp"
+
 namespace Pep {
 	Application* Application::s_Instance = nullptr;
 

@@ -7,3 +7,6 @@
 [submodule "Pep/vendor/imgui"]
 	path = Pep/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "pep/vendor/glm"]
+	path = pep/vendor/glm
+	url = https://github.com/g-truc/glm
