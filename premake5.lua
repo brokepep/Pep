@@ -12,7 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pep/vendor/GLFW/include"
+IncludeDir["glad"] = "Pep/vendor/glad/include"
+
 include "Pep/vendor/GLFW"
+include "Pep/vendor/glad"
 
 project "Pep"
 	location "Pep"
@@ -35,11 +38,13 @@ project "Pep"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.glad}"
 	}
 
 	links {
 		"GLFW",
+		"glad",
 		"opengl32.lib"
 	}
 
@@ -51,7 +56,8 @@ project "Pep"
 		defines
 		{
 			"PEP_PLATFORM_WINDOWS",
-			"PEP_BUILD_DLL"
+			"PEP_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

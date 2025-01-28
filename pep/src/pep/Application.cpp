@@ -1,12 +1,16 @@
 #include "peppch.h"
 #include "Application.h"
 
+#include <glad/glad.h>
 
 namespace Pep {
 
 	Application::Application() {
 		m_Window = std::unique_ptr<Window>( Window::Create() );
 		m_Window->SetEventCallback( BIND_EVENT_FN( Application::OnEvent ) );
+
+		unsigned int id;
+		glGenVertexArrays( 1, &id );
 	}
 
 	Application::~Application() {
