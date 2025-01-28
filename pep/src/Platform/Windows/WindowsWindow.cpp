@@ -1,5 +1,5 @@
 #include "peppch.h"
-#include "Pep/WindowsWindow.h"
+#include "WindowsWindow.h"
 
 #include "Pep/Events/ApplicationEvent.h"
 #include "Pep/Events/MouseEvent.h"

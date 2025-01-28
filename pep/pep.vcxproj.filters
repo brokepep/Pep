@@ -43,10 +43,12 @@
     <ClInclude Include="src\Pep\Window.h">
       <Filter>Pep</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pep\WindowsWindow.h">
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Pep</Filter>
     </ClInclude>
     <ClInclude Include="src\peppch.h" />
+    <ClInclude Include="src\Pep\imgui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pep\Application.cpp">
@@ -61,9 +63,11 @@
     <ClCompile Include="src\Pep\Log.cpp">
       <Filter>Pep</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pep\WindowsWindow.cpp">
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Pep</Filter>
     </ClCompile>
     <ClCompile Include="src\peppch.cpp" />
+    <ClCompile Include="src\Pep\imgui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
