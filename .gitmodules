@@ -3,4 +3,4 @@
 	url = https://github.com/gabime/spdlog
 [submodule "pep/vendor/GLFW"]
 	path = pep/vendor/GLFW
-	url = https://github.com/glfw/glfw
+	url = https://github.com/brokepep/glfw

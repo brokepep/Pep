@@ -7,12 +7,6 @@
     <Filter Include="Pep\Events">
       <UniqueIdentifier>{4E9D5696-3A55-98E3-A35C-713F8F3333D4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pep\Platform">
-      <UniqueIdentifier>{57442b8d-8df3-48f0-9135-973781ffb582}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pep\Platform\Windows">
-      <UniqueIdentifier>{b2783882-56fb-4b19-83e5-5a944d9c745e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pep.h" />
@@ -37,21 +31,39 @@
     <ClInclude Include="src\Pep\Events\MouseEvent.h">
       <Filter>Pep\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pep\Layer.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\LayerStack.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pep\Log.h">
       <Filter>Pep</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pep\Window.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\WindowsWindow.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
     <ClInclude Include="src\peppch.h" />
-    <ClInclude Include="src\Pep\Window.h" />
-    <ClInclude Include="src\Pep\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pep\Application.cpp">
       <Filter>Pep</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pep\Layer.cpp">
+      <Filter>Pep</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pep\LayerStack.cpp">
+      <Filter>Pep</Filter>
+    </ClCompile>
     <ClCompile Include="src\Pep\Log.cpp">
       <Filter>Pep</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pep\WindowsWindow.cpp">
+      <Filter>Pep</Filter>
+    </ClCompile>
     <ClCompile Include="src\peppch.cpp" />
-    <ClCompile Include="src\Pep\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
