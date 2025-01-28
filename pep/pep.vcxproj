@@ -155,7 +155,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Pep\imgui\ImGuiLayer.h" />
     <ClInclude Include="src\Pep.h" />
     <ClInclude Include="src\Pep\Application.h" />
     <ClInclude Include="src\Pep\Core.h" />
@@ -164,21 +163,27 @@
     <ClInclude Include="src\Pep\Events\Event.h" />
     <ClInclude Include="src\Pep\Events\KeyEvent.h" />
     <ClInclude Include="src\Pep\Events\MouseEvent.h" />
+    <ClInclude Include="src\Pep\Input.h" />
+    <ClInclude Include="src\Pep\KeyCodes.h" />
     <ClInclude Include="src\Pep\Layer.h" />
     <ClInclude Include="src\Pep\LayerStack.h" />
     <ClInclude Include="src\Pep\Log.h" />
+    <ClInclude Include="src\Pep\MouseButtonCodes.h" />
     <ClInclude Include="src\Pep\Window.h" />
+    <ClInclude Include="src\Pep\imgui\ImGuiLayer.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\peppch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Pep\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Pep\Application.cpp" />
     <ClCompile Include="src\Pep\Layer.cpp" />
     <ClCompile Include="src\Pep\LayerStack.cpp" />
     <ClCompile Include="src\Pep\Log.cpp" />
+    <ClCompile Include="src\Pep\imgui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\peppch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

@@ -1,5 +1,6 @@
 #include "peppch.h"
 #include "Application.h"
+#include "Input.h"
 
 #include <glad/glad.h>
 
@@ -23,8 +24,14 @@ namespace Pep {
 	void Application::Run() {
 		while( m_Running )
 		{
+			glClearColor( 0.1f, 0.1f, 0.1f, 1 );
+			glClear( GL_COLOR_BUFFER_BIT );
+
 			for( Layer* layer : m_LayerStack )
 				layer->OnUpdate();
+
+
+
 			m_Window->OnUpdate();
 		}
 	}

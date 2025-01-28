@@ -7,6 +7,18 @@
     <Filter Include="Pep\Events">
       <UniqueIdentifier>{4E9D5696-3A55-98E3-A35C-713F8F3333D4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pep\imgui">
+      <UniqueIdentifier>{9479BFB1-00E4-7328-4922-25CEB5CB517D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pep.h" />
@@ -31,6 +43,12 @@
     <ClInclude Include="src\Pep\Events\MouseEvent.h">
       <Filter>Pep\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pep\Input.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\KeyCodes.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pep\Layer.h">
       <Filter>Pep</Filter>
     </ClInclude>
@@ -40,15 +58,25 @@
     <ClInclude Include="src\Pep\Log.h">
       <Filter>Pep</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pep\MouseButtonCodes.h">
+      <Filter>Pep</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pep\Window.h">
       <Filter>Pep</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pep\imgui\ImGuiLayer.h">
+      <Filter>Pep\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
-      <Filter>Pep</Filter>
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\peppch.h" />
-    <ClInclude Include="src\Pep\imgui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pep\Application.cpp">
@@ -63,11 +91,18 @@
     <ClCompile Include="src\Pep\Log.cpp">
       <Filter>Pep</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pep\imgui\ImGuiLayer.cpp">
+      <Filter>Pep\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
-      <Filter>Pep</Filter>
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\peppch.cpp" />
-    <ClCompile Include="src\Pep\imgui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

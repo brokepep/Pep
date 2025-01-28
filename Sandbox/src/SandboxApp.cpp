@@ -7,10 +7,14 @@ public:
 		: Layer( "Example" ) {
 	}
 	void OnUpdate() override {
-		PEP_INFO( "ExampleLayer::Update" );
+		//PEP_INFO( "ExampleLayer::Update" );
 	}
 	void OnEvent( Pep::Event& event ) override {
-		PEP_TRACE( "{0}", event.ToString() );
+		if( event.GetEventType() == Pep::EventType::KeyTyped )
+		{
+			Pep::KeyTypedEvent& e = ( Pep::KeyTypedEvent& )event;
+			PEP_TRACE( "{0}", ( char )e.GetKeyCode() );
+		}
 	}
 };
 
