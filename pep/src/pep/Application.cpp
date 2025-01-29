@@ -58,29 +58,31 @@ namespace Pep {
 		glBindVertexArray( m_VertexArray );
 
 		float vertices[7 * 3] = {
-			-.5f, -.5f, .0f, 1.f, 0.f, 1.f, 1.f,
-			 .5f, -.5f, .0f, 1.f, 0.f, 1.f, 1.f,
-			 .0f,  .5f, .0f, 1.f, 0.f, 1.f, 1.f
+			-.5f, -.5f, .0f, .8f, 0.2f, .8f, 1.f,
+			 .5f, -.5f, .0f, .8f, .2f, .2f, 1.f,
+			 .0f,  .5f, .0f, .2f, .8f, .2f, 1.f
 		};
 
 		m_VertexBuffer.reset( VertexBuffer::Create( vertices, sizeof( vertices ) ) );
 
-		BufferLayout layout = {
-			{ ShaderDataType::Float3, "a_Position" },
-			{ ShaderDataType::Float4, "a_Color" }
-		};
+		{
+			BufferLayout layout = {
+						{ ShaderDataType::Float3, "a_Position" },
+						{ ShaderDataType::Float4, "a_Color" }
+			};
 
-		//m_VertexBuffer->SetLayout( layout );
+			m_VertexBuffer->SetLayout( layout );
+		}
 
 		uint32_t index = 0;
-		for( const auto& element : layout )
+		for( const auto& element : m_VertexBuffer->GetLayout() )
 		{
 			glEnableVertexAttribArray( index );
 			glVertexAttribPointer( index,
 								   element.GetComponentCount(),
 								   ShaderDataTypeToGLBaseType( element.Type ),
 								   element.Normalized ? GL_TRUE : GL_FALSE,
-								   layout.GetStride(),
+								   m_VertexBuffer->GetLayout().GetStride(),
 								   ( const void* )element.Offset );
 			index++;
 		}
