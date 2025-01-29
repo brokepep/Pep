@@ -23,6 +23,8 @@ namespace Pep {
 
 		LayerStack m_LayerStack;
 
+		uint m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+
 		static Application* s_Instance;
 	public:
 		Application();

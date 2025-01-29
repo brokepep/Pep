@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Pep/Window.h"
+#include "Pep/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
 
@@ -19,6 +20,8 @@ namespace Pep {
 
 			EventCallbackFn EventCallBack;
 		};
+
+		GraphicsContext* m_Context;
 
 		WindowData m_Data;
 	public:
