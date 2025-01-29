@@ -1,5 +1,6 @@
 project "glad"
 	kind "StaticLib"
+	staticruntime "On" --staticly linking the runtime libraries
 	language "C"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -19,7 +20,6 @@ project "glad"
 
 	filter "system:windows"
 		systemversion "latest"
-		staticruntime "On" --staticly linking the runtime libraries
 
 	filter "configurations:Debug"
 		runtime "Debug"

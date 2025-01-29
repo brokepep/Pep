@@ -1,10 +1,12 @@
 #pragma once
 
 #include "Core.h"
+
 #include "Window.h"
 #include "Pep/LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
+
 #include "Pep/ImGui/ImGuiLayer.h"
 
 namespace Pep {

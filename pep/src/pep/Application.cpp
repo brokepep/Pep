@@ -1,8 +1,12 @@
 #include "peppch.h"
 #include "Application.h"
-#include "Input.h"
+
+#include "Pep/Log.h"
 
 #include <glad/glad.h>
+
+#include "Input.h"
+
 
 namespace Pep {
 	Application* Application::s_Instance = nullptr;

@@ -1,10 +1,14 @@
 #pragma once
 
 #ifdef PEP_PLATFORM_WINDOWS
+#if PEP_DYNAMIC_LINK
 #ifdef PEP_BUILD_DLL
 #define PEP_API __declspec(dllexport)
 #else
 #define PEP_API __declspec(dllimport)
+#endif
+#else
+#define PEP_API
 #endif
 #else
 #error pep only supports Windows!

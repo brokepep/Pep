@@ -3,7 +3,6 @@
 // For use by pep applications
 #include "pep/Application.h"
 #include "pep/Layer.h"
-#include "pep/imgui/ImGuiLayer.h"
 #include "pep/Log.h"
 
 //--------------Input----------------
@@ -11,6 +10,7 @@
 #include "pep/KeyCodes.h"
 #include "pep/MouseButtonCodes.h"
 
+#include "pep/imgui/ImGuiLayer.h"
 
 //--------------EntryPoint----------------
 #include "pep/EntryPoint.h"

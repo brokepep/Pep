@@ -3,7 +3,6 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
-#include "peppch.h"
 
 namespace Pep {
 
