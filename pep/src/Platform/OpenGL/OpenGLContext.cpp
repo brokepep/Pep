@@ -14,6 +14,10 @@ namespace Pep {
 		glfwMakeContextCurrent( m_WindowHandle );
 		int status = gladLoadGLLoader( ( GLADloadproc )glfwGetProcAddress );
 		PEP_CORE_ASSERT( status, "Failed to initialize glad!" );
+
+		PEP_CORE_INFO( "OpenGL Info:" );
+		PEP_CORE_INFO( "    Version: {0}", ( const char* )glGetString( GL_VERSION ) );
+		PEP_CORE_INFO( "    GPU: {0}", ( const char* )glGetString( GL_RENDERER ) );
 	}
 
 	void OpenGLContext::SwapBuffers() {
