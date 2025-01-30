@@ -31,7 +31,7 @@ namespace Pep {
 			glDeleteShader( vertexShader );
 
 			// Use the infoLog as you see fit.
-			PEP_CORE_ERROR( "{0}", infoLog.data() );
+			PEP_CORE_ERROR( "Vertex Shader Error:{0}", infoLog.data() );
 			PEP_CORE_ASSERT( false, "Vertex Shader Compilation Error!" );
 			// In this simple program, we'll just leave
 			return;
@@ -64,7 +64,7 @@ namespace Pep {
 			glDeleteShader( vertexShader );
 
 			// Use the infoLog as you see fit.
-			PEP_CORE_ERROR( "{0}", infoLog.data() );
+			PEP_CORE_ERROR( "Fragment Shader Error: {0}", infoLog.data() );
 			PEP_CORE_ASSERT( false, "Fragment Shader Compilation Error!" );
 			// In this simple program, we'll just leave
 			return;
