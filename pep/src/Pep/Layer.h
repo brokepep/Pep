@@ -2,6 +2,7 @@
 
 #include "Pep/Core.h"
 #include "Pep/Events/Event.h"
+#include "Pep/Core/Timestep.h"
 
 namespace Pep {
 	class PEP_API Layer
@@ -15,7 +16,7 @@ namespace Pep {
 		virtual ~Layer();
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate( Timestep ts ) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent( Event& event ) {}
 

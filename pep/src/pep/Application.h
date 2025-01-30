@@ -12,6 +12,8 @@
 #include "Pep/Renderer/Shader.h"
 #include "Pep/Renderer/Buffer.h"
 #include "Pep/Renderer/VertexArray.h"
+#include "Pep/Renderer/OrthographicCamera.h"
+#include "Pep/Core/Timestep.h"
 
 
 namespace Pep {
@@ -26,13 +28,16 @@ namespace Pep {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 
+		float m_LastFrameTime = 0.0f;
+
 		LayerStack m_LayerStack;
 
 		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<Shader> m_Shader2;
 		std::shared_ptr<VertexArray> m_VertexArray;
 
 		std::shared_ptr<VertexArray> m_SquareVA;
+		std::shared_ptr<Shader> m_Shader2;
+
 	private:
 		static Application* s_Instance;
 	public:

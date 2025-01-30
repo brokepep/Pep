@@ -1365,6 +1365,8 @@
     <ClInclude Include="src\Pep\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Pep\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
+    <ClInclude Include="src\Pep\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Pep\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pep\Application.cpp">
@@ -1405,5 +1407,6 @@
     <ClCompile Include="src\Pep\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Pep\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="src\Pep\Renderer\OrthographicCamera.cpp" />
   </ItemGroup>
 </Project>
