@@ -110,6 +110,7 @@ public:
 		m_TextureShader.reset( Pep::Shader::Create( TextureShaderVertexSrc, TextureShaderFragmentSrc ) );
 
 		m_Texture = Pep::Texture2D::Create( "assets/textures/Checkerboard.png" );
+		m_LogoTexture = Pep::Texture2D::Create( "assets/textures/ChernoLogo.png" );
 
 		std::dynamic_pointer_cast< Pep::OpenGLShader > ( m_TextureShader )->Bind();
 		std::dynamic_pointer_cast< Pep::OpenGLShader > ( m_TextureShader )->UploadUniformInt( "u_Texture", 0 );
@@ -159,6 +160,8 @@ public:
 		}
 		m_Texture->Bind();
 		Pep::Renderer::Submit( m_TextureShader, m_SquareVA, glm::scale( glm::mat4( 1.f ), glm::vec3( 1.5f ) ) );
+		m_LogoTexture->Bind();
+		Pep::Renderer::Submit( m_TextureShader, m_SquareVA, glm::scale( glm::mat4( 1.f ), glm::vec3( 1.5f ) ) );
 
 
 		Pep::Renderer::EndScene();
@@ -179,7 +182,7 @@ private:
 	Pep::Ref<Pep::Shader> m_FlatColorShader, m_TextureShader;
 	Pep::Ref<Pep::VertexArray> m_SquareVA;
 
-	Pep::Ref<Pep::Texture2D> m_Texture;
+	Pep::Ref<Pep::Texture2D> m_Texture, m_LogoTexture;
 
 	glm::vec3 m_CameraPosition;
 	float m_CameraMoveSpeed = 2.f;
