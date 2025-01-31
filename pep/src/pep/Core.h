@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 
 #ifdef PEP_PLATFORM_WINDOWS
 #if PEP_DYNAMIC_LINK
@@ -27,3 +28,11 @@
 #define PEP_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
 
 typedef unsigned int uint;
+
+namespace Pep {
+	template<typename T>
+	using Scope = std::unique_ptr<T>;
+
+	template<typename T>
+	using Ref = std::shared_ptr<T>;
+}

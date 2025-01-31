@@ -20,7 +20,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<Pep::VertexBuffer> vertexBuffer;
+		Pep::Ref<Pep::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset( Pep::VertexBuffer::Create( vertices, sizeof( vertices ) ) );
 
 		Pep::BufferLayout layout = {
@@ -34,7 +34,7 @@ public:
 
 		uint32_t indices[3] = { 0, 1, 2 };
 
-		std::shared_ptr<Pep::IndexBuffer> indexBuffer;
+		Pep::Ref<Pep::IndexBuffer> indexBuffer;
 		indexBuffer.reset( Pep::IndexBuffer::Create( indices, sizeof( indices ) / sizeof( uint ) ) );
 		m_VertexArray->SetIndexBuffer( indexBuffer );
 
@@ -46,7 +46,7 @@ public:
 			 0.5f,  0.5f, 0.0f,
 			-0.5f,  0.5f, 0.0f
 		};
-		std::shared_ptr<Pep::VertexBuffer> squareVB;
+		Pep::Ref<Pep::VertexBuffer> squareVB;
 		squareVB.reset( Pep::VertexBuffer::Create( squareVertices, sizeof( squareVertices ) ) );
 
 		squareVB->SetLayout( {
@@ -55,7 +55,7 @@ public:
 		m_SquareVA->AddVertexBuffer( squareVB );
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Pep::IndexBuffer> squareIB;
+		Pep::Ref<Pep::IndexBuffer> squareIB;
 		squareIB.reset( Pep::IndexBuffer::Create( squareIndices, sizeof( squareIndices ) / sizeof( uint32_t ) ) );
 		m_SquareVA->SetIndexBuffer( squareIB );
 
@@ -183,10 +183,12 @@ public:
 
 private:
 	Pep::OrthographicCamera m_Camera;
-	std::shared_ptr<Pep::Shader> m_Shader;
-	std::shared_ptr<Pep::VertexArray> m_VertexArray;
-	std::shared_ptr<Pep::Shader> m_FlatColorShader;
-	std::shared_ptr<Pep::VertexArray> m_SquareVA;
+
+	Pep::Ref<Pep::Shader> m_Shader;
+	Pep::Ref<Pep::VertexArray> m_VertexArray;
+
+	Pep::Ref<Pep::Shader> m_FlatColorShader;
+	Pep::Ref<Pep::VertexArray> m_SquareVA;
 
 	glm::vec3 m_CameraPosition;
 	float m_CameraMoveSpeed = 2.f;

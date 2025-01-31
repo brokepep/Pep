@@ -32,11 +32,11 @@ namespace Pep {
 
 		LayerStack m_LayerStack;
 
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
+		Ref<Shader> m_Shader;
+		Ref<VertexArray> m_VertexArray;
 
-		std::shared_ptr<VertexArray> m_SquareVA;
-		std::shared_ptr<Shader> m_Shader2;
+		Ref<VertexArray> m_SquareVA;
+		Ref<Shader> m_Shader2;
 
 	private:
 		static Application* s_Instance;
