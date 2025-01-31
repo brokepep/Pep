@@ -20,5 +20,6 @@
 #include "pep/Renderer/RenderCommand.h"
 #include "pep/Renderer/Buffer.h"
 #include "pep/Renderer/Shader.h"
+#include "pep/Renderer/Texture.h"
 #include "pep/Renderer/VertexArray.h"
 #include "pep/Renderer/OrthographicCamera.h"

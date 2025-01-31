@@ -17,6 +17,7 @@ IncludeDir["GLFW"] = "Pep/vendor/GLFW/include"
 IncludeDir["Glad"] = "Pep/vendor/Glad/include"
 IncludeDir["ImGui"] = "Pep/vendor/imgui"
 IncludeDir["glm"] = "Pep/vendor/glm"
+IncludeDir["stb_image"] = "Pep/vendor/stb_image"
 
 include "Pep/vendor/GLFW"
 include "Pep/vendor/Glad"
@@ -40,6 +41,8 @@ project "Pep"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
@@ -56,7 +59,8 @@ project "Pep"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links 
