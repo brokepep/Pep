@@ -6,7 +6,6 @@
 
 #include "imgui/imgui.h"
 
-
 class ExampleLayer : public Pep::Layer
 {
 public:
@@ -72,48 +71,18 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset( Pep::Shader::Create( flatColorShaderVertexSrc, flatColorShaderFragmentSrc ) );
+		m_FlatColorShader = Pep::Shader::Create( "FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc );
 
-		std::string TextureShaderVertexSrc = R"(
-			#version 330 core
-			
-			layout(location = 0) in vec3 a_Position;
-			layout(location = 1) in vec2 a_TexCoord;
-			
-			uniform mat4 u_ViewProjection;
-			uniform mat4 u_Transform;
-			
-			out vec2 v_TexCoord;
-			
-			void main()
-			{
-				v_TexCoord = a_TexCoord;
-				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);	
-			}
-		)";
 
-		std::string TextureShaderFragmentSrc = R"(
-			#version 330 core
-			
-			layout(location = 0) out vec4 color;
-			
-			in vec2 v_TexCoord;
-			
-			uniform sampler2D u_Texture;
 
-			void main()
-			{
-				color = texture(u_Texture, v_TexCoord);
-			}
-		)";
+		auto textureShader = m_ShaderLibrary.Load( "assets/shaders/Texture.glsl" );
 
-		m_TextureShader.reset( Pep::Shader::Create( TextureShaderVertexSrc, TextureShaderFragmentSrc ) );
 
 		m_Texture = Pep::Texture2D::Create( "assets/textures/Checkerboard.png" );
 		m_LogoTexture = Pep::Texture2D::Create( "assets/textures/ChernoLogo.png" );
 
-		std::dynamic_pointer_cast< Pep::OpenGLShader > ( m_TextureShader )->Bind();
-		std::dynamic_pointer_cast< Pep::OpenGLShader > ( m_TextureShader )->UploadUniformInt( "u_Texture", 0 );
+		std::dynamic_pointer_cast< Pep::OpenGLShader > ( textureShader )->Bind();
+		std::dynamic_pointer_cast< Pep::OpenGLShader > ( textureShader )->UploadUniformInt( "u_Texture", 0 );
 	}
 	void OnUpdate( Pep::Timestep ts ) override {
 
@@ -158,10 +127,12 @@ public:
 				Pep::Renderer::Submit( m_FlatColorShader, m_SquareVA, transform );
 			}
 		}
+
+		auto textureShader = m_ShaderLibrary.Get( "Texture" );
 		m_Texture->Bind();
-		Pep::Renderer::Submit( m_TextureShader, m_SquareVA, glm::scale( glm::mat4( 1.f ), glm::vec3( 1.5f ) ) );
+		Pep::Renderer::Submit( textureShader, m_SquareVA, glm::scale( glm::mat4( 1.f ), glm::vec3( 1.5f ) ) );
 		m_LogoTexture->Bind();
-		Pep::Renderer::Submit( m_TextureShader, m_SquareVA, glm::scale( glm::mat4( 1.f ), glm::vec3( 1.5f ) ) );
+		Pep::Renderer::Submit( textureShader, m_SquareVA, glm::scale( glm::mat4( 1.f ), glm::vec3( 1.5f ) ) );
 
 
 		Pep::Renderer::EndScene();
@@ -179,7 +150,8 @@ public:
 private:
 	Pep::OrthographicCamera m_Camera;
 
-	Pep::Ref<Pep::Shader> m_FlatColorShader, m_TextureShader;
+	Pep::ShaderLibrary m_ShaderLibrary;
+	Pep::Ref<Pep::Shader> m_FlatColorShader;
 	Pep::Ref<Pep::VertexArray> m_SquareVA;
 
 	Pep::Ref<Pep::Texture2D> m_Texture, m_LogoTexture;
