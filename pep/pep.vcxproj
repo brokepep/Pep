@@ -162,6 +162,7 @@
     <ClInclude Include="src\Pep\LayerStack.h" />
     <ClInclude Include="src\Pep\Log.h" />
     <ClInclude Include="src\Pep\MouseButtonCodes.h" />
+    <ClInclude Include="src\Pep\OrthographicCameraController.h" />
     <ClInclude Include="src\Pep\Renderer\Buffer.h" />
     <ClInclude Include="src\Pep\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Pep\Renderer\OrthographicCamera.h" />
@@ -608,6 +609,7 @@
     <ClCompile Include="src\Pep\Layer.cpp" />
     <ClCompile Include="src\Pep\LayerStack.cpp" />
     <ClCompile Include="src\Pep\Log.cpp" />
+    <ClCompile Include="src\Pep\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Pep\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Pep\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Pep\Renderer\RenderCommand.cpp" />

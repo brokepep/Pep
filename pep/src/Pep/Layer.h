@@ -11,9 +11,8 @@ namespace Pep {
 		std::string m_DebugName;
 	public:
 		Layer( const std::string& name = "Layer" );
+		virtual ~Layer() = default;
 
-
-		virtual ~Layer();
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
 		virtual void OnUpdate( Timestep ts ) {}
