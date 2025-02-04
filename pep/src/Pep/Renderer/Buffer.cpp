@@ -18,7 +18,7 @@ namespace Pep {
 		return nullptr;
 	}
 
-	Ref<IndexBuffer> IndexBuffer::Create( uint* indices, uint32_t count ) {
+	Ref<IndexBuffer> IndexBuffer::Create( uint32_t* indices, uint32_t count ) {
 		switch( Renderer::GetAPI() )
 		{
 			case RendererAPI::API::None: PEP_CORE_ASSERT( false, "RendererAPI::None is currently not supported!" ); return nullptr;

@@ -6,7 +6,7 @@
 #include "backends/imgui_impl_opengl3.h"
 #include "backends/imgui_impl_glfw.h"
 
-#include "Pep/Application.h"
+#include "Pep/Core/Application.h"
 
 // Temporary
 #include <glad/glad.h>

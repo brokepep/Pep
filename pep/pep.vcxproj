@@ -76,7 +76,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>peppch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PEP_PLATFORM_WINDOWS;PEP_BUILD_DLL;GLFW_INCLUDE_NONE;PEP_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PEP_BUILD_DLL;GLFW_INCLUDE_NONE;PEP_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -147,22 +147,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Pep.h" />
-    <ClInclude Include="src\Pep\Application.h" />
-    <ClInclude Include="src\Pep\Core.h" />
+    <ClInclude Include="src\Pep\Core\Application.h" />
+    <ClInclude Include="src\Pep\Core\Core.h" />
+    <ClInclude Include="src\Pep\Core\EntryPoint.h" />
+    <ClInclude Include="src\Pep\Core\Input.h" />
+    <ClInclude Include="src\Pep\Core\KeyCodes.h" />
+    <ClInclude Include="src\Pep\Core\Layer.h" />
+    <ClInclude Include="src\Pep\Core\LayerStack.h" />
+    <ClInclude Include="src\Pep\Core\Log.h" />
+    <ClInclude Include="src\Pep\Core\MouseButtonCodes.h" />
+    <ClInclude Include="src\Pep\Core\OrthographicCameraController.h" />
     <ClInclude Include="src\Pep\Core\Timestep.h" />
-    <ClInclude Include="src\Pep\EntryPoint.h" />
+    <ClInclude Include="src\Pep\Core\Window.h" />
     <ClInclude Include="src\Pep\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Pep\Events\Event.h" />
     <ClInclude Include="src\Pep\Events\KeyEvent.h" />
     <ClInclude Include="src\Pep\Events\MouseEvent.h" />
     <ClInclude Include="src\Pep\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Pep\Input.h" />
-    <ClInclude Include="src\Pep\KeyCodes.h" />
-    <ClInclude Include="src\Pep\Layer.h" />
-    <ClInclude Include="src\Pep\LayerStack.h" />
-    <ClInclude Include="src\Pep\Log.h" />
-    <ClInclude Include="src\Pep\MouseButtonCodes.h" />
-    <ClInclude Include="src\Pep\OrthographicCameraController.h" />
     <ClInclude Include="src\Pep\Renderer\Buffer.h" />
     <ClInclude Include="src\Pep\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Pep\Renderer\OrthographicCamera.h" />
@@ -172,7 +173,6 @@
     <ClInclude Include="src\Pep\Renderer\Shader.h" />
     <ClInclude Include="src\Pep\Renderer\Texture.h" />
     <ClInclude Include="src\Pep\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Pep\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
@@ -603,13 +603,13 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Pep\Application.cpp" />
+    <ClCompile Include="src\Pep\Core\Application.cpp" />
+    <ClCompile Include="src\Pep\Core\Layer.cpp" />
+    <ClCompile Include="src\Pep\Core\LayerStack.cpp" />
+    <ClCompile Include="src\Pep\Core\Log.cpp" />
+    <ClCompile Include="src\Pep\Core\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Pep\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Pep\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Pep\Layer.cpp" />
-    <ClCompile Include="src\Pep\LayerStack.cpp" />
-    <ClCompile Include="src\Pep\Log.cpp" />
-    <ClCompile Include="src\Pep\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Pep\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Pep\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Pep\Renderer\RenderCommand.cpp" />

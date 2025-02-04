@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Pep/Core.h"
-#include "Pep/Layer.h"
+#include "Pep/Core/Core.h"
+#include "Pep/Core/Layer.h"
 
 #include <vector>
 

@@ -1,11 +1,14 @@
 #include <Pep.h>
 
-#include "Platform/OpenGL/OpenGLShader.h"
+#include <Platform/OpenGL/OpenGLShader.h>
+#include <Pep/Core/EntryPoint.h>
 
 #include "imgui/imgui.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
+#include "Sandbox2D.h"
 
 class ExampleLayer : public Pep::Layer
 {
@@ -141,7 +144,7 @@ public:
 		m_CameraController.OnUpdate( ts );
 
 		// Render
-		Pep::RenderCommand::SetClearColor( {1.f, .5f, 1.f, 1 } );
+		Pep::RenderCommand::SetClearColor( { .1f, .1f, .1f, 1 } );
 		Pep::RenderCommand::Clear();
 
 		Pep::Renderer::BeginScene( m_CameraController.GetCamera() );
@@ -201,7 +204,8 @@ class Sandbox : public Pep::Application
 {
 public:
 	Sandbox() {
-		PushLayer( new ExampleLayer() );
+		//PushLayer( new ExampleLayer() );
+		PushLayer( new Sandbox2D() );
 	}
 
 	~Sandbox() {

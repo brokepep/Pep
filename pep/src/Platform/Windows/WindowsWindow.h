@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pep/Window.h"
+#include "Pep/Core/Window.h"
 #include "Pep/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

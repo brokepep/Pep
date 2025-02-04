@@ -76,7 +76,6 @@ project "Pep"
 
 		defines
 		{
-			"PEP_PLATFORM_WINDOWS",
 			"PEP_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
 		}
@@ -110,11 +109,13 @@ project "Sandbox"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/assets/shaders/**.glsl"
 	}
 
 	includedirs
 	{
+		"%{prj.name}/assets/shaders",
 		"Pep/vendor/spdlog/include",
 		"Pep/src",
 		"Pep/vendor",

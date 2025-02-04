@@ -1,11 +1,11 @@
 #include "peppch.h"
 #include "Application.h"
 
-#include "Pep/Log.h"
+#include "Pep/Core/Log.h"
 
 #include "Pep/Renderer/Renderer.h"
 
-#include "Input.h"
+#include "Pep/Core/Input.h"
 
 #include <glfw/glfw3.h>
 
@@ -50,7 +50,7 @@ namespace Pep {
 	}
 
 	void Application::Run() {
-		
+
 		while( m_Running )
 		{
 			float time = ( float )glfwGetTime();

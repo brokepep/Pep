@@ -57,17 +57,41 @@
     <ClInclude Include="src\Pep.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pep\Application.h">
-      <Filter>src\Pep</Filter>
+    <ClInclude Include="src\Pep\Core\Application.h">
+      <Filter>src\Pep\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pep\Core.h">
-      <Filter>src\Pep</Filter>
+    <ClInclude Include="src\Pep\Core\Core.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\EntryPoint.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\Input.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\KeyCodes.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\Layer.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\LayerStack.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\Log.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\MouseButtonCodes.h">
+      <Filter>src\Pep\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pep\Core\OrthographicCameraController.h">
+      <Filter>src\Pep\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Pep\Core\Timestep.h">
       <Filter>src\Pep\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pep\EntryPoint.h">
-      <Filter>src\Pep</Filter>
+    <ClInclude Include="src\Pep\Core\Window.h">
+      <Filter>src\Pep\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Pep\Events\ApplicationEvent.h">
       <Filter>src\Pep\Events</Filter>
@@ -83,24 +107,6 @@
     </ClInclude>
     <ClInclude Include="src\Pep\ImGui\ImGuiLayer.h">
       <Filter>src\Pep\ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\Input.h">
-      <Filter>src\Pep</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\KeyCodes.h">
-      <Filter>src\Pep</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\Layer.h">
-      <Filter>src\Pep</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\LayerStack.h">
-      <Filter>src\Pep</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\Log.h">
-      <Filter>src\Pep</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\MouseButtonCodes.h">
-      <Filter>src\Pep</Filter>
     </ClInclude>
     <ClInclude Include="src\Pep\Renderer\Buffer.h">
       <Filter>src\Pep\Renderer</Filter>
@@ -128,9 +134,6 @@
     </ClInclude>
     <ClInclude Include="src\Pep\Renderer\VertexArray.h">
       <Filter>src\Pep\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pep\Window.h">
-      <Filter>src\Pep</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
@@ -1416,26 +1419,28 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pep\OrthographicCameraController.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Pep\Application.cpp">
-      <Filter>src\Pep</Filter>
+    <ClCompile Include="src\Pep\Core\Application.cpp">
+      <Filter>src\Pep\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pep\Core\Layer.cpp">
+      <Filter>src\Pep\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pep\Core\LayerStack.cpp">
+      <Filter>src\Pep\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pep\Core\Log.cpp">
+      <Filter>src\Pep\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pep\Core\OrthographicCameraController.cpp">
+      <Filter>src\Pep\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Pep\ImGui\ImGuiBuild.cpp">
       <Filter>src\Pep\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Pep\ImGui\ImGuiLayer.cpp">
       <Filter>src\Pep\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Pep\Layer.cpp">
-      <Filter>src\Pep</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Pep\LayerStack.cpp">
-      <Filter>src\Pep</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Pep\Log.cpp">
-      <Filter>src\Pep</Filter>
     </ClCompile>
     <ClCompile Include="src\Pep\Renderer\Buffer.cpp">
       <Filter>src\Pep\Renderer</Filter>
@@ -1491,6 +1496,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pep\OrthographicCameraController.cpp" />
   </ItemGroup>
 </Project>

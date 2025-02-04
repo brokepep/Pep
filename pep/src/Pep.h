@@ -1,19 +1,17 @@
 #pragma once
 
 // For use by pep applications
-#include "pep/Application.h"
-#include "pep/Layer.h"
-#include "pep/Log.h"
+#include "pep/Core/Application.h"
+#include "pep/Core/Layer.h"
+#include "pep/Core/Log.h"
 #include "pep/Core/Timestep.h"
 
 //--------------Input----------------
-#include "pep/Input.h"
-#include "pep/KeyCodes.h"
-#include "pep/MouseButtonCodes.h"
+#include "pep/Core/Input.h"
+#include "pep/Core/KeyCodes.h"
+#include "pep/Core/MouseButtonCodes.h"
 #include "pep/imgui/ImGuiLayer.h"
-#include "Pep/OrthographicCameraController.h"
-//--------------EntryPoint----------------
-#include "pep/EntryPoint.h"
+#include "pep/Core/OrthographicCameraController.h"
 
 //--------------Renderer----------------
 #include "pep/Renderer/Renderer.h"

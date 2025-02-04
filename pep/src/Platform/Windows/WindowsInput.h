@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pep/Input.h"
+#include "Pep/Core/Input.h"
 
 namespace Pep {
 	class  WindowsInput : public Input

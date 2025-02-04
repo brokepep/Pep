@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pep/Core.h"
+#include "Pep/Core/Core.h"
 #include <string>
 namespace Pep {
 	class Texture

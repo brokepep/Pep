@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pep/Log.h"
+#include "Pep/Core/Log.h"
 
 #include <iostream>
 #include <memory>

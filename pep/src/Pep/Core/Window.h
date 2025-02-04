@@ -2,7 +2,7 @@
 
 #include "peppch.h"
 
-#include "Pep/Core.h"
+#include "Pep/Core/Core.h"
 #include "Pep/Events/Event.h"
 
 namespace Pep {

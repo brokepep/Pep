@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pep/Core.h"
+#include "Pep/Core/Core.h"
 
 namespace Pep {
 	class PEP_API Input

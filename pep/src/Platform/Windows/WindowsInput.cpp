@@ -1,7 +1,7 @@
 #include "peppch.h"
 #include "WindowsInput.h"
 
-#include "Pep/Application.h"
+#include "Pep/Core/Application.h"
 
 #include <GLFW/glfw3.h>
 

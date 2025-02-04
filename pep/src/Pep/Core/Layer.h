@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Pep/Core.h"
+#include "Pep/Core/Core.h"
 #include "Pep/Events/Event.h"
 #include "Pep/Core/Timestep.h"
 
